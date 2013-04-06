@@ -1,19 +1,38 @@
-A2j
+**A2J**
 ========================
 
-This application was generated with the rails_apps_composer gem:
-https://github.com/RailsApps/rails_apps_composer
-provided by the RailsApps Project:
-http://railsapps.github.com/
+Rails 3 application designed to pull data from Amazon Product API and display that data in both list a visual format utilizing morris.js.  Data is presented via JSON API (and fed to morris.js this way); the data is also available to external applications as JSON via the following API:
+
+Single item: /item/id.json
+Item list: /items.json
 
 ________________________
 
-Recipes:
-["controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "prelaunch", "railsapps", "readme", "routes", "saas", "setup", "testing", "views"]
+**License**
+=========================
+This application is freeware/open source under the Revised BSD license.
 
-Preferences:
-{:git=>true, :railsapps=>"none", :dev_webserver=>"thin", :prod_webserver=>"thin", :database=>"postgresql", :templates=>"erb", :unit_test=>"rspec", :integration=>"rspec-capybara", :continuous_testing=>"none", :fixtures=>"none", :frontend=>"bootstrap", :bootstrap=>"sass", :email=>"none", :authentication=>"none", :authorization=>"none", :form_builder=>"simple_form", :starter_app=>"home_app", :rvmrc=>false, :quiet_assets=>true, :local_env_file=>true, :better_errors=>true, :ban_spiders=>true}
+Copyright (c) <2013>, <Richard Carey>
+All rights reserved.
 
-________________________
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the author nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
 
-License
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
