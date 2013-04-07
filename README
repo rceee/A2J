@@ -6,6 +6,20 @@ Rails 3 application designed to pull data from Amazon Product API and display th
 Single item: /item/id.json
 Item list: /items.json
 
+**Setup**
+========================
+
+Set your Amazon Product API Credentials in config/application.yml as follows:
+
+    ASSOCIATE_TAG: (yourtag) 
+    KEY_ID: (yourID)
+    SECRET_KEY: (yourKey)
+
+For Heroku, run:
+
+    rake figaro:heroku
+    
+To push the environment variables to Heroku.
 ________________________
 
 **License**
