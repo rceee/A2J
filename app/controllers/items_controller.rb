@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
 
   def index
-    @items = Item.all
+    @items = Item.order("salesrank ASC")
+    @chartitems = Item.where("salesrank <= ?", 100).order("release ASC")
 
     respond_to do |format|
       format.html

@@ -1,4 +1,58 @@
+/*Bootstrap Color Settings (LESS Precompiler)*/
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$grayDarker:            #222 !default;
+$grayDark:              #333 !default;
+$gray:                  #555 !default;
+$grayLight:             #999 !default;
+$grayLighter:           #eee !default;
+$white:                 #fff !default;
+
+
+// Accent colors
+// -------------------------
+$blue:                  #049cdb !default;
+$blueDark:              #0064cd !default;
+$green:                 #46a546 !default;
+$red:                   #9d261d !default;
+$yellow:                #ffc40d !default;
+$orange:                #f89406 !default;
+$pink:                  #c3325f !default;
+$purple:                #7a43b6 !default;
+
+$navbarBackground: black !default;
+$navbarBackgroundHighlight: darkBlue !default;
+$navbarLinkColor:                 $white !default;
+$navbarLinkColorHover:            #777 !default;
+$navbarLinkColorActive:           $grayLighter !default;
+$navbarLinkBackgroundHover:       transparent !default;
+$navbarLinkBackgroundActive:      darken($navbarBackground, 5%) !default;
+
+$navbarBrandColor:                $white !default;
+$navbarBrandColorHover:           $gray  !default;
+
 @import "bootstrap";
 body { padding-top: 60px; }
 @import "bootstrap-responsive";
+
+/*Navbar Styling */
+.navbar .brand {
+  font-weight: bold;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.navbar .brand:hover {
+  color: gray;
+}
+
+/* General Styling*/
 .center {text-align:center;}
+
+/*Index Styling*/
+.indexitem {height:325px; overflow:scroll;}
+a.thumbnail { margin-bottom:10px; height:170px;}
+.details { font-size:18px;}
+.rank {color:black; font-weight:bold;}

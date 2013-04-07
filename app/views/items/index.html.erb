@@ -4,17 +4,18 @@ $('.thumbnail').tooltip();
 });
 </script>
 <h1>Amazon Album Sales Rank Trends</h1>
-<div id="amazon"></div>
+<h3 class="muted">(Top 100 Displayed In Chart)
+<%= content_tag :div, "", id: "amazon", data: {items: @chartitems} %>
 <hr />
 <ul class="thumbnails">
-  <% @items.each do |item| %>
+  <% @items.sort_by{|s| s[:salesrank]}.each do |item| %>
     <li class="span3">
-      <div class="thumbnail">
+      <div class="thumbnail indexitem">
         <%=link_to image_tag(item.thumbnail_url), item, class:"thumbnail", :rel => "tooltip", :title => item.name.html_safe %>
-        <p class="text-info center"><strong><%= link_to item.name, item %></strong></p>
-        <p class="text-info center"><%= link_to item.album, item %></p>
-        <p class="text-info center">Sales Rank</p>
-        <h2 class="center"><%= item.salesrank %>
+        <p class="text-info center"><strong><%= link_to item.name.html_safe, item %></strong></p>
+        <p class="details text-info center"><%= link_to item.album.html_safe, item %></p>
+        <p class="details text-info center">Sales Rank</p>
+        <h2 class="rank center"><strong><%= item.salesrank %></strong></h2>
       </div>
     </li>
   <% end %>  
