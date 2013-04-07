@@ -1,0 +1,10 @@
+<%= simple_form_for @item,:html => { :class => 'form-vertical' } do |f| %>
+  <% if notification = f.error_notification %>
+        <%= notification %>
+    <% end %>
+    <%= f.input :asin, :wrapper => :prepend, :label => false, required: true do %>
+        <%= content_tag :span, "ASIN", :class => "add-on" %>
+        <%= f.input_field :asin %>
+    <% end %>
+  <%= f.button :submit, value: "Add Album" %>
+<% end %>

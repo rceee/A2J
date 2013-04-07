@@ -1,3 +1,4 @@
 A2j::Application.routes.draw do
-  root :to => "home#index"
+  resources :items
+  root :to => "items#index"
 end

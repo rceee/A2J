@@ -1,0 +1,10 @@
+<ul class="thumbnails">
+  <% @items.each do |item| %>
+    <li class="span3">
+      <div class="thumbnail bookindex">
+        <%=link_to image_tag(item.thumbnail_url), item, class:"thumbnail", :rel => "tooltip", :title => item.name.html_safe %>
+        <p class="text-info hometextcenter"><%= link_to item.name, item %></p>
+      </div>
+    </li>
+  <% end %>  
+</ul>
