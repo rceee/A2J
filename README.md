@@ -3,8 +3,9 @@
 
 Rails 3 application designed to pull data from Amazon Product API and display that data in both list a visual format utilizing morris.js.  Data is presented via JSON API (and fed to morris.js this way); the data is also available to external applications as JSON via the following API:
 
-Single item: /item/id.json
-Item list: /items.json
+**Single item**: /item/id.json
+
+**Item list**: /items.json
 
 **Setup**
 ========================
