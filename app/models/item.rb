@@ -1,8 +1,10 @@
 class Item < ActiveRecord::Base
-  attr_accessible :description, :name, :release, :salesrank, :thumbnail_url
+  attr_accessible :description, :name, :release, :salesrank, :thumbnail_url, :album, :asin
+
+  default_scope order('salesrank')
 
   def self.lookup(id)
-    Amazon::Ecs.item_lookup(id, :response_group => 'ItemAttributes,Images,EditorialReview,SalesRank')
+    res = Amazon::Ecs.item_lookup(id, :response_group => 'ItemAttributes,Images,EditorialReview,SalesRank')
   end
 
 end

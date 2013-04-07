@@ -1,3 +1,6 @@
+<h2>Add A New Album</h2>
+<p>Simply paste an ASIN number for your favorite album into the form below to see how it ranks on the chart.</p>
+<p class="muted">Visit <%= link_to "Amazon", "http://www.amazon.com/" %> to search for albums and their related ASIN ID numbers.</p>
 <%= simple_form_for @item,:html => { :class => 'form-vertical' } do |f| %>
   <% if notification = f.error_notification %>
         <%= notification %>

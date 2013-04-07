@@ -1,9 +1,20 @@
+<script>
+$(document).ready(function() {
+$('.thumbnail').tooltip();
+});
+</script>
+<h1>Amazon Album Sales Rank Trends</h1>
+<div id="amazon"></div>
+<hr />
 <ul class="thumbnails">
   <% @items.each do |item| %>
     <li class="span3">
-      <div class="thumbnail bookindex">
+      <div class="thumbnail">
         <%=link_to image_tag(item.thumbnail_url), item, class:"thumbnail", :rel => "tooltip", :title => item.name.html_safe %>
-        <p class="text-info hometextcenter"><%= link_to item.name, item %></p>
+        <p class="text-info center"><strong><%= link_to item.name, item %></strong></p>
+        <p class="text-info center"><%= link_to item.album, item %></p>
+        <p class="text-info center">Sales Rank</p>
+        <h2 class="center"><%= item.salesrank %>
       </div>
     </li>
   <% end %>  

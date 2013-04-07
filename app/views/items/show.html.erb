@@ -1,0 +1,17 @@
+<script>
+$(document).ready(function() {
+$('.thumbnail').tooltip();
+});
+</script>
+<div class="row">
+  <div class="span5">
+    <h2><%=@item.name %></h2>
+    <h3><%=@item.album%></h2>
+    <h5>Amazon Sales Rank: <%= @item.salesrank %></h5>
+    <h5>Released on <%= @item.release %></h5>
+    <p>Purchase on <%= link_to "Amazon", @item.description %></p>
+  </div>
+  <div class="span7">
+    <img class="img-polaroid thumbnail" src="<%= @item.thumbnail_url%>" data-toggle="tooltip" title="<%= @item.album %>">
+  </div>
+</div>
