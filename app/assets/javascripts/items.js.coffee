@@ -8,7 +8,7 @@ jQuery ->
     labels: ['Sales Rank']
     ymax:100
     xLabels:"month"
-    smooth:false
+    # smooth:false
     hoverCallback: (index, options) ->
       row = options.data[index]
       "#" + row.salesrank + ": " + row.name + ": " + row.album + "<br />" + row.release
